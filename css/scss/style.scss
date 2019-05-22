@@ -1,0 +1,139 @@
+$topbarPadding:50px;
+$bgGreen: #ADDF40;
+$headingColor: #1C1C1C;
+
+@font-face{
+    font-family: 'Nirmala UI';
+    src: url('../fonts/nirmala-ui.ttf');
+}
+.unclickable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+  }
+.cleaner{
+    clear:both;
+}
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Nirmala UI';
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+ul{
+    list-style-type: none;
+}
+
+header{
+    width: 100%;
+    height: 600px;
+    background: {
+        image:url('../images/background.jpg');
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+}
+#headerTop{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px $topbarPadding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+
+    &Logo{
+        display: flex;
+        align-items: center;
+        img{
+            height: 40px;
+            display: inline-block;
+        }
+        h1{
+            display: inline;
+            letter-spacing: 1px;
+            font-weight: normal;
+            margin-left: 15px;
+            span{
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &Menu{
+        ul{
+            display: flex;
+            li{
+                margin: 0px 10px;
+                a{
+                    font-size: 22px;
+                    &:hover{
+                        text-decoration: underline;
+                        color: $bgGreen;
+                    }
+                }
+            }
+        }
+        button{
+             display:none;
+             background-color: transparent;
+             border: none;
+             color: $bgGreen;
+             font-size: 48px;
+             padding: 0px 7px;
+         }
+    }
+}
+#projects{
+    width:100%;
+    text-align: center;
+    padding: 0px 20px;
+    margin-top: 30px;
+
+    h2{
+        font-size: 48px;
+        color: $headingColor;
+    }
+
+    &List{
+        width: 100%;
+        margin-top: 20px;
+        .projectsListItem{
+            float: left;
+            width: 33.3%;
+            padding: 1%;
+
+            a{
+                &:hover{
+                    img{
+                        transform: scale(1.02);
+                    
+                    }
+                }
+            }
+            
+            img{
+                transition: transform 0.1s;
+                max-width: 100%;
+                border-radius: 3px;
+                box-shadow: 2px 2px 5px #000;
+            }
+            h3,p{
+                font-size: 28px;
+                @extend .unclickable;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+    
+}
+
