@@ -19,7 +19,7 @@
 }
 
 .paddingLR-5 {
-  padding: 0% 5% !important;
+  padding: 0% 6% !important;
 }
 
 .mr-top-6 {
@@ -44,7 +44,7 @@ ul {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 42px;
   color: #1C1C1C;
   text-align: center;
 }
@@ -164,6 +164,7 @@ header {
 
 #projectsList .projectsListItem h3, #projectsList .projectsListItem p {
   font-size: 28px;
+  color: #131313;
 }
 
 #projectsList .projectsListItem p {
@@ -175,7 +176,9 @@ header {
   background-color: #F6F6F6;
   border-top: 1px solid #707070;
   margin-top: 20px;
-  padding: 20px 0px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  z-index: 2;
 }
 
 #skillsList {
@@ -194,11 +197,229 @@ header {
 #skillsList .skillsListItem {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
-  padding: 0px 6%;
-  margin-top: 4%;
+  padding: 0px 8%;
+  margin-top: 5%;
 }
 
 #skillsList .skillsListItem img {
   width: 100%;
+}
+
+#aboutMe {
+  width: 100%;
+  color: #FFF;
+  background-color: #070707;
+  position: relative;
+  z-index: -1;
+  padding: 30px 0px;
+}
+
+#aboutMeBgImage {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  z-index: 0;
+  width: 8%;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+#aboutMeBgImage img {
+  max-width: 100%;
+}
+
+#aboutMe h2 {
+  text-align: center;
+  color: #FFF;
+  font-size: 38px;
+}
+
+#aboutMeContainer {
+  width: 100%;
+  padding: 0px 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0px;
+}
+
+#aboutMeContainerImage {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  margin-right: 5%;
+}
+
+#aboutMeContainerImage img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  float: right;
+}
+
+#aboutMeContainer p {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+#contact {
+  width: 100%;
+  padding: 30px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact h2 {
+  width: 100%;
+}
+
+#contactMail {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+#contactMail h3 {
+  font-size: 32px;
+  margin: 30px 0px;
+  color: #131313;
+}
+
+#contactMail input, #contactMail textarea {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  color: #131313;
+  padding: 7px;
+  padding-left: 10px;
+  border: 2px solid #707070;
+  resize: none;
+}
+
+#contactMail input::-webkit-input-placeholder, #contactMail textarea::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #C6C6C6;
+}
+
+#contactMailMessage {
+  margin-top: 10px;
+}
+
+#contactMailButton {
+  display: block;
+  width: 100%;
+  margin: 5px 0px;
+  padding: 10px 0px;
+  background-color: #ADDF40;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+#contactMailButton:hover {
+  background-color: #abf112;
+}
+
+#contactMailButton i {
+  color: #000;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+#contactMail p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #131313;
+  margin: 20px 0px;
+}
+
+#contactMailSocials a i {
+  font-size: 38px;
+  margin: 0px 15px;
+  color: black;
+}
+
+#contactMailSocials a:nth-child(1) i {
+  color: #3D5A98;
+}
+
+#contactMailSocials a:nth-child(1) i:hover {
+  color: #4f71b9;
+}
+
+#contactMailSocials a:nth-child(2) i {
+  color: #924CC4;
+}
+
+#contactMailSocials a:nth-child(2) i:hover {
+  color: #a972d1;
+}
+
+#contactMailSocials a:nth-child(3) i {
+  color: #2CB742;
+}
+
+#contactMailSocials a:nth-child(3) i:hover {
+  color: #44d25a;
+}
+
+#contactGit {
+  float: right;
+  width: 50%;
+  padding: 0px 10%;
+}
+
+#contactGit img {
+  display: block;
+  max-width: 70%;
+  margin: 0px auto;
+}
+
+#contactGit a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #2D2D2D;
+  padding: 8px 0px;
+  border: 2px solid #1a1a1a;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 55px;
+}
+
+#contactGit a:hover {
+  background-color: #202020;
+}
+
+footer {
+  background-color: #070707;
+  text-align: center;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+footer ul {
+  margin: 20px 0px;
+}
+
+footer ul li {
+  margin: 2px 0px;
+}
+
+footer ul li a:hover {
+  color: #ADDF40;
+}
+
+footer p {
+  display: block;
+  color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */

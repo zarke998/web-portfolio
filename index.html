@@ -17,12 +17,14 @@
                 <h1 class="unclickable"><span>Andrej Zarkovski</span> | Web developer</h1>
             </div>
             <div id="headerTopMenu">
+            <nav>
                 <ul>
-                    <li><a href="index.html">Projects</a></li>
-                    <li><a href="index.html">Skills</a></li>
-                    <li><a href="index.html">About me</a></li>
-                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#aboutMe">About me</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+            </nav>
                 <button type="button"><i class="fas fa-bars"></i></button>
             </div>
         </div>
@@ -32,7 +34,7 @@
             <h2>Projects</h2>
             <div id="projectsList">
                 <div class="projectsListItem">
-                    <a href="http://zarke998.github.io/otakushop"><img src="images/projects/otaku-shop.jpg" alt="Project image"/></a>
+                    <a href="http://zarke998.github.io/otakushop" target="_blank"><img src="images/projects/otaku-shop.jpg" alt="Project image"/></a>
                     <h3>Otaku Shop</h3>
                     <p>(HTML5, CSS3) <br> (static)</p>
                 </div>
@@ -89,6 +91,53 @@
                 <div class="cleaner"></div>
             </div>
         </div>
+        <div id="aboutMe">
+            <div id="aboutMeBgImage">
+                <img src="images/programmer-joke.png" alt="Background image"/>
+            </div>
+            <h2>About me</h2>
+            <div id="aboutMeContainer">
+                <div id="aboutMeContainerImage"><img src="images/profile.jpg" alt="Profile image"></div>
+                <p>My name is Andrej Zarkovski. I'm studying <br>
+                        web programming at "Visoka ICT Škola" 
+                        in Belgrade. In my early childhood I was very
+                        interested in how computers work and
+                        I continued to learn more about them. 
+                        Now I am pursuing career in computer programming. 
+                        I love japanese culture and I love playing sports.</p>
+            </div>
+        </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            <div id="contactMail">
+                <h3>Email me</h3>
+
+                <input type="text" id="contactMailSubject" placeholder="Subject"/>
+                <textarea name="mailMessage" id="contactMailMessage" cols="30" rows="8" placeholder="Message"></textarea>
+                <a href="mailto:zarke998@gmail.com" id="contactMailButton"><i class="far fa-paper-plane"></i></a>
+                <p>or find me on social media</p>
+                <div id="contactMailSocials">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.viber.com/" target="_blank"><i class="fab fa-viber"></i></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div id="contactGit">     
+                <img src="images/github-logo.png" alt="Github image"/>
+                <a href="https://github.com/zarke998" target="_blank">Go to my Github</a>
+            </div>
+        </div>
     </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">SASS</a></li>
+                <li><a href="#">Original CSS</a></li>
+                <li><a href="#">Responsive CSS</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </nav>
+        <p>&copy; Copyright | Andrej Zarkovski</p>
+    </footer>
 </body>
 </html>

@@ -1,9 +1,17 @@
 $topbarPadding:50px;
 $primaryGreen: #ADDF40;
+$primaryGreenStrong: #abf112;
 $headingBlack: #1C1C1C;
 $bgGray: #F6F6F6;
 $borderGray: #707070;
-
+$titleBlack: #131313;
+$aboutMeBgBlack: #070707;
+$placehodlerGray: #C6C6C6;
+$formBorderBlack: #252525;
+$facebookBlue: #3D5A98;
+$viberPurple: #924CC4;
+$whatsappGreen: #2CB742;
+$btnBlack: #2D2D2D;
 @font-face{
     font-family: 'Nirmala UI';
     src: url('../fonts/nirmala-ui.ttf');
@@ -18,7 +26,7 @@ $borderGray: #707070;
     clear:both;
 }
 .paddingLR-5{
-    padding: 0% 5% !important;
+    padding: 0% 6% !important;
 }
 .mr-top-6{
     margin-top: 6% !important;
@@ -37,7 +45,7 @@ ul{
     list-style-type: none;
 }
 h2{
-    font-size: 48px;
+    font-size: 42px;
     color: $headingBlack;
     text-align: center;
 }
@@ -133,6 +141,7 @@ header{
             }
             h3,p{
                 font-size: 28px;
+                color: $titleBlack;
                 @extend .unclickable;
             }
             p {
@@ -147,7 +156,9 @@ header{
     background-color: $bgGray;
     border-top: 1px solid $borderGray;
     margin-top: 20px;
-    padding: 20px 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    z-index: 2;
 
     &List{
         width: 100%;
@@ -157,11 +168,209 @@ header{
         padding: 0px 10%;
         .skillsListItem{
             flex-basis: 25%;
-            padding: 0px 6%;
-            margin-top: 4%;
+            padding: 0px 8%;
+            margin-top: 5%;
 
-            img{ width:100%; }
+            img{ 
+                width:100%;
+            }
         }
     }
 }
 
+#aboutMe{
+    width: 100%;
+    color: #FFF;
+    background-color: $aboutMeBgBlack;
+    position: relative;
+    z-index: -1;
+    padding: 30px 0px;
+    
+
+    &BgImage{
+        position: absolute;
+        top: 25px;
+        right: 50px;
+        z-index: 0;
+        width: 8%;
+        transform: rotate(35deg);
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+    h2{
+        text-align: center;
+        color: #FFF;
+        font-size: 38px;
+    }
+
+    &Container{
+        width: 100%;
+        padding: 0px 10%;
+        display: flex;
+        align-items: center;
+        margin: 40px 0px;
+        &Image{
+            flex: 0 0 25%;
+            margin-right: 5%;
+            img{
+                max-width: 100%;
+                border-radius: 50%;
+                border: 1px solid #FFF;
+                float:right;
+            }
+        }
+        p{
+            font-size: 28px;
+            font-weight: lighter;
+        }
+    }
+}
+#contact{
+    width: 100%;
+    padding: 30px 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h2{
+        width: 100%;
+    }
+
+    &Mail{
+        float: left;
+        width: 50%;
+        text-align: center;
+
+        h3{
+            font-size: 32px;
+            margin: 30px 0px;
+            color: $titleBlack;
+        }
+
+        input, textarea{
+            width: 100%;
+            font: {
+                size:22px;
+                weight:bold;
+            }
+            color: $titleBlack;
+            padding: 7px;
+            padding-left: 10px;
+            border: 2px solid $borderGray;
+            resize: none;
+
+            &::-webkit-input-placeholder{
+                font-weight: bold;
+                color: $placehodlerGray;
+            }
+        }
+        &Message{
+            margin-top: 10px;
+        }
+
+        &Button{
+            display: block;
+            width: 100%;
+            margin: 5px 0px;
+            padding: 10px 0px;
+            background-color: $primaryGreen;
+            border: 2px solid #000;
+            border-radius: 5px;
+            &:hover{
+                background-color: $primaryGreenStrong;
+            }
+            i{
+                color: #000;
+                font-size: 28px;
+                font-weight: normal;
+            }
+        }
+        
+        p{
+            font: {
+                size: 22px;
+                weight: bold;
+            }
+            color: $titleBlack;
+            margin: 20px 0px;
+        }
+
+        &Socials{
+            a{
+                i{
+                    font-size: 38px;
+                    margin: 0px 15px;
+                    color: black;
+                }
+
+                &:nth-child(1) i{
+                    color: $facebookBlue; 
+                    &:hover{ 
+                        color: lighten($facebookBlue,10%);
+                    }
+                }
+
+                &:nth-child(2) i{
+                    color: $viberPurple; 
+                    &:hover{ 
+                        color: lighten($viberPurple,10%);
+                    }
+                }
+
+                &:nth-child(3) i{
+                    color: $whatsappGreen; 
+                    &:hover{ 
+                        color: lighten($whatsappGreen,10%);
+                    }
+                }
+            }
+        }
+    }
+    &Git{
+        float: right;
+        width: 50%;
+        padding: 0px 10%;
+
+        img{
+            display: block;            
+            max-width: 70%;
+            margin: 0px auto;
+        }
+
+        a{
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: $btnBlack;
+            padding: 8px 0px;
+            border: 2px solid lighten(#000, 10%);
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 55px;
+            &:hover{
+                background-color: darken($btnBlack,5%);
+            }
+        }
+    }
+}
+footer{
+    background-color: $aboutMeBgBlack;
+    text-align: center;
+    overflow: auto;
+    padding-bottom: 10px;
+    ul{
+        margin: 20px 0px;
+        li{
+            margin: 2px 0px;
+            a:hover{
+                color: $primaryGreen;
+            }
+        }
+    }
+    p{ 
+        display: block;color: #FFF; }
+}
