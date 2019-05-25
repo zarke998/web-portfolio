@@ -18,10 +18,6 @@
   clear: both;
 }
 
-.paddingLR-5 {
-  padding: 0% 6% !important;
-}
-
 .mr-top-6 {
   margin-top: 6% !important;
 }
@@ -101,6 +97,19 @@ header {
   font-weight: bold;
 }
 
+#headerTopMenu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 #headerTopMenu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,8 +134,9 @@ header {
   background-color: transparent;
   border: none;
   color: #ADDF40;
-  font-size: 48px;
+  font-size: 42px;
   padding: 0px 7px;
+  margin-left: auto;
 }
 
 #projects {
@@ -138,11 +148,17 @@ header {
 #projectsList {
   width: 100%;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #projectsList .projectsListItem {
-  float: left;
-  width: 33.3%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3%;
+          flex: 0 0 33.3%;
   padding: 1%;
 }
 
@@ -191,6 +207,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0px 10%;
 }
 
@@ -203,6 +222,10 @@ header {
 
 #skillsList .skillsListItem img {
   width: 100%;
+}
+
+#skillsList .skillsSmallImages {
+  padding: 0% 6%;
 }
 
 #aboutMe {
@@ -219,7 +242,7 @@ header {
   top: 25px;
   right: 50px;
   z-index: 0;
-  width: 8%;
+  width: 10%;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
 }
@@ -248,8 +271,8 @@ header {
 
 #aboutMeContainerImage {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
   margin-right: 5%;
 }
 
@@ -283,7 +306,6 @@ header {
 }
 
 #contactMail {
-  float: left;
   width: 50%;
   text-align: center;
 }
@@ -372,14 +394,14 @@ header {
 }
 
 #contactGit {
-  float: right;
   width: 50%;
   padding: 0px 10%;
+  padding-right: 0%;
 }
 
 #contactGit img {
   display: block;
-  max-width: 70%;
+  width: 300px;
   margin: 0px auto;
 }
 

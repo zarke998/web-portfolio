@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Andrej Zarkovski | Web developer</title>
     <link rel="stylesheet" type="text/css" href="css/scss/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
     <header>
@@ -17,15 +19,15 @@
                 <h1 class="unclickable"><span>Andrej Zarkovski</span> | Web developer</h1>
             </div>
             <div id="headerTopMenu">
-            <nav>
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#aboutMe">About me</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-                <button type="button"><i class="fas fa-bars"></i></button>
+                <button type="button" onclick="showMenu()"><i class="fas fa-bars"></i></button>
+                <nav >
+                    <ul id="navMenu">
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#aboutMe">About me</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -79,13 +81,13 @@
                 <div class="skillsListItem">
                     <img src="images/skills/j-query.png" alt="Skill image"/>
                 </div>
-                <div class="skillsListItem paddingLR-5">
+                <div class="skillsListItem skillsSmallImages">
                     <img src="images/skills/php.png" alt="Skill image"/>
                 </div>
-                <div class="skillsListItem paddingLR-5">
+                <div class="skillsListItem skillsSmallImages">
                     <img src="images/skills/asp-net.png" alt="Skill image"/>
                 </div>
-                <div class="skillsListItem paddingLR-5">
+                <div class="skillsListItem skillsSmallImages">
                     <img src="images/skills/node-js.png" alt="Skill image"/>
                 </div>
                 <div class="cleaner"></div>
@@ -139,5 +141,17 @@
         </nav>
         <p>&copy; Copyright | Andrej Zarkovski</p>
     </footer>
+
+    <script>
+        function showMenu() {
+          var navMenu = document.getElementById("navMenu");
+          if(navMenu.style.display === "none"){
+              navMenu.style.display = "flex";
+          }
+          else{
+              navMenu.style.display = "none";
+          }
+        }
+    </script>
 </body>
 </html>
