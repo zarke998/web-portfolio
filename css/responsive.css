@@ -1,8 +1,11 @@
-@media screen and (max-width:1180px){
-    #projects #projectsList .projectsListItem{
-        flex: 0 0 50%;
+@media screen and (max-width:1080px){
+    html{
+        font-size: 18px;
     }
+}
 
+@media screen and (max-width:992px){
+/*HEADER */
     #headerTop #headerTopMenu nav ul{
         display: none;
         flex-direction: column;
@@ -14,10 +17,17 @@
     #headerTop #headerTopMenu nav ul li{
         margin: 5px 0px;
     }
+    #headerTop #headerTopMenu nav ul li a{
+        font-size: 1.2rem;
+    }
     #headerTop #headerTopMenu button{
         display: block;
     }
-
+/*PROJECTS (2 cols) */
+    #projects #projectsList .projectsListItem{
+        flex: 0 0 50%;
+    }
+/*SKILLS (3 cols) */
     #skills #skillsList .skillsListItem{
         flex-basis: 33.3%;
         padding: 0px 10%;
@@ -25,26 +35,15 @@
     #skills #skillsList .skillsSmallImages{
         padding: 0px 8%;
     }
-
-}
-
-@media screen and (max-width:950px)
-{
-    #aboutMeContainer{
-        flex-direction: column;
-    }
+/*ABOUT ME */
     #aboutMeContainer #aboutMeContainerImage{
-        flex-direction: column;
-        margin-right: 0px;
-        margin-bottom: 5%;
-    }
-    #aboutMeContainer p{
-        text-align: center;
-    }
-    #aboutMe #aboutMeBgImage{
-        width: 15%;
+        flex: 0 0 200px;
     }
 
+/* CONTACT (2 cols)*/
+    #contact{
+        padding: 30px 10%;
+    }
     #contact #contactMail{
         width: 100%;
     }
@@ -54,59 +53,86 @@
         padding: 0%;
     }
     #contact #contactGit img{
-        width: 280px;
+        width: 260px;
     }
     #contact #contactMail #contactMailSocials i{
-        font-size: 48px;
+        font-size: 2rem;
     }
+
     footer{
-        font-size: 18px;
+        font-size: 0.9rem;
     }
 }
-
-@media screen and (max-width: 680px)
-{
-    #projects{
-        padding: 3%;
+@media screen and (max-width: 768px){
+/* HEADER */
+    #headerTop{
+        padding: 10px 20px;
+    }
+/* PROJECTS (1 col)*/
+    #projects #projectsList{
+        padding: 0px 10%;
     }
     #projects #projectsList .projectsListItem{
         flex: 0 0 100%;
         padding: 0px;
-        margin-bottom: 10px;
+        margin: 10px 0px;
     }
-    #headerTop{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+/* SKILLS (2 cols)*/
     #skills #skillsList{
         padding: 0px 5%;
     }
     #skills #skillsList .skillsListItem{
         flex-basis: 50%;
-        padding: 0px 12%;
+        padding: 0px 16%;
     }
     #skills #skillsList .skillsSmallImages{
-        padding: 0px 10%;
+        padding: 0px 14%;
+    }
+
+/* ABOUT ME (1 col) */
+    #aboutMeContainer{
+        flex-direction: column;
+    }
+    #aboutMeContainer #aboutMeContainerImage{
+        width: 250px;
+        margin: 0px auto;
+        margin-bottom: 5%;
+    }
+    #aboutMeContainer p{
+        text-align: center;
     }
     #aboutMe #aboutMeBgImage{
-        width: 20%;
+        width: 15%;
     }
-    
+}
+
+@media screen and (max-width: 550px){
+/* PROJECTS (1 col)*/
+    #projects #projectsList{
+    padding: 0px 5%;
+    }
 }
 
 @media screen and (max-width: 425px){
+/* HEADER */
+    header{
+        height: 400px;
+    }
+    #headerTop #headerTopLogo img{
+        display: none;
+    }
+/* SKILLS */
     #skills #skillsList .skillsListItem{
-        padding: 0px 8%;
+        padding: 0px 13%;
     }
     #skills #skillsList .skillsSmallImages{
-        padding: 0px 6%;
+        padding: 0px 11%;
     }
+/* ABOUT ME */
     #aboutMe #aboutMeBgImage{
         display: none;
     }
-}
-@media screen and (max-width: 350px){
-    #headerTop #headerTopLogo img{
-        display: none;
+    #aboutMeContainer #aboutMeContainerImage{
+        width: 200px;
     }
 }

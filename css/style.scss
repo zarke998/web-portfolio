@@ -2,7 +2,7 @@ $topbarPadding:50px;
 $primaryGreen: #ADDF40;
 $primaryGreenStrong: #abf112;
 $headingBlack: #1C1C1C;
-$bgGray: #F6F6F6;
+$skillsBgGray: #F6F6F6;
 $borderGray: #707070;
 $titleBlack: #131313;
 $aboutMeBgBlack: #070707;
@@ -35,6 +35,9 @@ $btnBlack: #2D2D2D;
     font-family: 'Nirmala UI';
     box-sizing: border-box;
 }
+html{
+    font-size: 20px;
+}
 a{
     text-decoration: none;
     color: #FFF;
@@ -43,7 +46,7 @@ ul{
     list-style-type: none;
 }
 h2{
-    font-size: 42px;
+    font-size: 2rem;
     color: $headingBlack;
     text-align: center;
 }
@@ -75,6 +78,7 @@ header{
             display: inline-block;
         }
         h1{
+            font-size: 1.5rem;
             display: inline;
             letter-spacing: 1px;
             font-weight: normal;
@@ -98,7 +102,7 @@ header{
             li{
                 margin: 0px 10px;
                 a{
-                    font-size: 22px;
+                    font-size: 1rem;
                     &:hover{
                         text-decoration: underline;
                         color: $primaryGreen;
@@ -111,7 +115,7 @@ header{
              background-color: transparent;
              border: none;
              color: $primaryGreen;
-             font-size: 42px;
+             font-size: 38px;
              padding: 0px 7px;
              margin-left: auto;
          }
@@ -120,13 +124,14 @@ header{
 #projects{
     width:100%;
     text-align: center;
-    padding: 30px 50px;
+    padding: 30px 0px;
 
     &List{
         width: 100%;
         margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
+        padding: 0px 50px;
         .projectsListItem{
             flex: 0 0 33.3%;
             padding: 1%;
@@ -146,12 +151,12 @@ header{
                 box-shadow: 2px 2px 5px #000;
             }
             h3,p{
-                font-size: 28px;
+                font-size: 1.3rem;
                 color: $titleBlack;
                 @extend .unclickable;
             }
             p {
-                font-size: 24px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -159,7 +164,7 @@ header{
 }
 #skills{
     width: 100%;
-    background-color: $bgGray;
+    background-color: $skillsBgGray;
     border-top: 1px solid $borderGray;
     margin-top: 20px;
     padding-top: 20px;
@@ -214,7 +219,7 @@ header{
     h2{
         text-align: center;
         color: #FFF;
-        font-size: 38px;
+        font-size: 1.8rem;
     }
 
     &Container{
@@ -234,7 +239,7 @@ header{
             }
         }
         p{
-            font-size: 28px;
+            font-size: 1.2rem;
             font-weight: lighter;
         }
     }
@@ -256,7 +261,7 @@ header{
         text-align: center;
 
         h3{
-            font-size: 32px;
+            font-size: 1.6rem;
             margin: 30px 0px;
             color: $titleBlack;
         }
@@ -264,7 +269,7 @@ header{
         input, textarea{
             width: 100%;
             font: {
-                size:22px;
+                size: 1.2rem;
                 weight:bold;
             }
             color: $titleBlack;
@@ -302,7 +307,7 @@ header{
         
         p{
             font: {
-                size: 22px;
+                size: 1.2rem;
                 weight: bold;
             }
             color: $titleBlack;
@@ -312,7 +317,7 @@ header{
         &Socials{
             a{
                 i{
-                    font-size: 38px;
+                    font-size:1.8rem;
                     margin: 0px 15px;
                     color: black;
                 }
@@ -358,7 +363,7 @@ header{
             padding: 8px 0px;
             border: 2px solid lighten(#000, 10%);
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 1rem;
             margin-top: 55px;
             &:hover{
                 background-color: darken($btnBlack,5%);
@@ -371,8 +376,9 @@ footer{
     text-align: center;
     overflow: auto;
     padding-bottom: 10px;
+    padding-top: 20px;
     ul{
-        margin: 20px 0px;
+        margin-bottom: 20px;
         li{
             margin: 2px 0px;
             a:hover{
