@@ -3,25 +3,6 @@
   src: url("../fonts/nirmala-ui.ttf");
 }
 
-.unclickable, #projectsList .projectsListItem h3, #projectsList .projectsListItem p {
-  -webkit-user-select: none;
-  /* Chrome all / Safari all */
-  -moz-user-select: none;
-  /* Firefox all */
-  -ms-user-select: none;
-  /* IE 10+ */
-  user-select: none;
-  /* Likely future */
-}
-
-.cleaner {
-  clear: both;
-}
-
-.mr-top-6 {
-  margin-top: 6% !important;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -102,6 +83,10 @@ header {
   font-weight: bold;
 }
 
+#headerTopLogo h1 br {
+  display: none;
+}
+
 #headerTopMenu {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -119,6 +104,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 #headerTopMenu ul li {
@@ -450,5 +436,106 @@ footer ul li a:hover {
 footer p {
   display: block;
   color: #FFF;
+}
+
+/* CUSTOM CLASSES */
+.unclickable, #projectsList .projectsListItem h3, #projectsList .projectsListItem p {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+.cleaner {
+  clear: both;
+}
+
+/* ANIMAITON CLASSES */
+.li-base {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+}
+
+.dropDown {
+  -webkit-animation-name: dropDownAnimation;
+          animation-name: dropDownAnimation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dropDownAnimation {
+  0% {
+    opacity: 0;
+    top: -60px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes dropDownAnimation {
+  0% {
+    opacity: 0;
+    top: -60px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes dropUpAnimation {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -60px;
+  }
+}
+
+@keyframes dropUpAnimation {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -60px;
+  }
+}
+
+.dropUp {
+  -webkit-animation-name: dropUpAnimation;
+          animation-name: dropUpAnimation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* PROPERTY CLASSES */
+.mr-top-6 {
+  margin-top: 6% !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 /*# sourceMappingURL=style.css.map */

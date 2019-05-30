@@ -16,19 +16,6 @@ $btnBlack: #2D2D2D;
     font-family: 'Nirmala UI';
     src: url('../fonts/nirmala-ui.ttf');
 }
-.unclickable {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */      
-  }
-.cleaner{
-    clear:both;
-}
-
-.mr-top-6{
-    margin-top: 6% !important;
-}
 *{
     margin:0px;
     padding:0px;
@@ -87,6 +74,9 @@ header{
                 text-transform: uppercase;
                 font-weight: bold;
             }
+            br{
+                display: none;
+            }
         }
     }
 
@@ -99,6 +89,7 @@ header{
         justify-content: flex-end;
         ul{
             display: flex;
+            position: relative;
             li{
                 margin: 0px 10px;
                 a{
@@ -388,4 +379,66 @@ footer{
     }
     p{ 
         display: block;color: #FFF; }
+}
+
+/* CUSTOM CLASSES */
+.unclickable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+  }
+.cleaner{
+    clear:both;
+}
+
+
+/* ANIMAITON CLASSES */
+.li-base{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+}
+.dropDown{
+    animation-name: dropDownAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes dropDownAnimation{
+    0%{
+        opacity: 0;
+        top: -60px;
+    }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+@keyframes dropUpAnimation{
+    0%{
+        opacity: 1;
+        top: 0px;
+    }
+    100%{
+        opacity: 0;
+        top: -60px;
+    }
+    
+}
+.dropUp{
+    animation-name: dropUpAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* PROPERTY CLASSES */
+.mr-top-6{
+    margin-top: 6% !important;
+}
+.d-none{
+    display: none !important;
+}
+.d-flex{
+    display: flex !important;
 }

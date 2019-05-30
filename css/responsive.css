@@ -6,6 +6,9 @@
 
 @media screen and (max-width:992px){
 /*HEADER */
+    #headerTop #headerTopLogo{
+        margin-right: 20px;
+    }
     #headerTop #headerTopMenu nav ul{
         display: none;
         flex-direction: column;
@@ -117,6 +120,9 @@
 /* HEADER */
     header{
         height: 400px;
+    }
+    #headerTop{
+        padding: 10px 10px;
     }
     #headerTop #headerTopLogo img{
         display: none;

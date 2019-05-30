@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Andrej Zarkovski | Web developer</title>
-    <link rel="stylesheet" type="text/css" href="css/style.minfied.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.minified.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.minified.css" />
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
@@ -22,8 +22,8 @@
                 <h1 class="unclickable"><span>Andrej Zarkovski</span> | Web developer</h1>
             </div>
             <div id="headerTopMenu">
-                <button type="button" onclick="showMenu()"><i class="fas fa-bars"></i></button>
-                <nav >
+                <button type="button" onclick="showMenu('navMenu',800)"><i class="fas fa-bars"></i></button>
+                <nav>
                     <ul id="navMenu">
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -144,17 +144,7 @@
         </nav>
         <p>&copy; Copyright | Andrej Zarkovski</p>
     </footer>
-
-    <script>
-        function showMenu() {
-          var navMenu = document.getElementById("navMenu");
-          if(navMenu.style.display === "none"){
-              navMenu.style.display = "flex";
-          }
-          else{
-              navMenu.style.display = "none";
-          }
-        }
+    <script src="js/main.js">
     </script>
 </body>
 </html>
