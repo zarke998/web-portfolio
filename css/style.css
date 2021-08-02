@@ -271,7 +271,6 @@ header {
 #aboutMeContainerImage img {
   max-width: 100%;
   border-radius: 50%;
-  border: 1px solid #FFF;
   float: right;
 }
 
