@@ -3,7 +3,31 @@ var menuShowed = false;
 var navMenu;
 var navMenuItems;
 
+document.addEventListener("DOMContentLoaded", function(){
+    document.querySelector("#contactMailButton").addEventListener("click", sendEmail);
+});
+
+function sendEmail(e){
+    e.preventDefault();
+
+    let subject = document.querySelector("#contactMailSubject").value;
+    let message = document.querySelector("#contactMailMessage").value;
+
+    if(subject.length == 0){
+        alert("Please enter subject for email.");
+        return;
+    }
+
+    if(message.length == 0){
+        alert("Please enter message for email.");
+        return;
+    }
+
+    window.location = `mailto:zarke998@gmail.com?subject=${subject}&body=${message}`;
+}
+
 function showMenu(menuID, animationDuration) {
+
     if(!animationRunning){
         animationRunning = true;
 
