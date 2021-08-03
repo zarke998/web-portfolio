@@ -360,19 +360,19 @@ header {
   color: black;
 }
 
-#contactMailSocials a:nth-child(1) i {
+#contactMailSocials a:nth-child(2) i {
   color: #3D5A98;
 }
 
-#contactMailSocials a:nth-child(1) i:hover {
+#contactMailSocials a:nth-child(2) i:hover {
   color: #4f71b9;
 }
 
-#contactMailSocials a:nth-child(2) i {
+#contactMailSocials a:nth-child(3) i {
   color: #924CC4;
 }
 
-#contactMailSocials a:nth-child(2) i:hover {
+#contactMailSocials a:nth-child(3) i:hover {
   color: #a972d1;
 }
 
@@ -410,6 +410,17 @@ header {
 
 #contactGit a:hover {
   background-color: #202020;
+}
+
+#contactLeftMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {

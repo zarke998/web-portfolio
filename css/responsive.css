@@ -141,4 +141,16 @@
     #aboutMeContainer #aboutMeContainerImage{
         width: 200px;
     }
+/* EMAIL AND SOCIALS */
+    #contactLeftMore{
+        flex-wrap: wrap;
+    }
+
+    #contactLeftMore > div:nth-child(1) > p:nth-child(1){
+        margin-bottom: 0px;
+    }
+    #contactLeftMore > div:nth-child(1) > p:nth-child(2){
+        margin-top: 10px;
+    }
+
 }

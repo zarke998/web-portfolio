@@ -312,14 +312,14 @@ header{
                     color: black;
                 }
 
-                &:nth-child(1) i{
+                &:nth-child(2) i{
                     color: $facebookBlue; 
                     &:hover{ 
                         color: lighten($facebookBlue,10%);
                     }
                 }
 
-                &:nth-child(2) i{
+                &:nth-child(3) i{
                     color: $viberPurple; 
                     &:hover{ 
                         color: lighten($viberPurple,10%);
@@ -334,6 +334,8 @@ header{
                 }
             }
         }
+
+
     }
     &Git{
         width: 50%;
@@ -360,6 +362,11 @@ header{
             }
         }
     }
+}
+#contactLeftMore{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 footer{
     background-color: $aboutMeBgBlack;
