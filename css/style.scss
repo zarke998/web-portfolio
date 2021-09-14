@@ -125,22 +125,45 @@ header{
         padding: 0px 50px;
         .projectsListItem{
             flex: 0 0 33.3%;
-            padding: 1%;
+            padding: 1%;    
 
-            a{
-                &:hover{
-                    img{
-                        transform: scale(1.02);
-                    }
+            position: relative;
+
+            &:hover{
+                img{
+                    transform: scale(1.02);
+                }
+
+                .code-link-button{
+                    display: block;
+                    animation-name: codeButtonAnimationDown;
+                    animation-duration: 0.3s;
                 }
             }
-            
-            img{
-                transition: transform 0.1s;
-                max-width: 100%;
-                border-radius: 3px;
-                box-shadow: 2px 2px 5px #000;
+
+            .code-link-button{
+                position: absolute;
+                right: 4%;
+                top: 5%;
+                z-index: 1000;
+                display: none;
+
+                &:hover {
+                    filter: brightness(1.1);
+                }
+                img{
+                    width: 40px;
+                }
             }
+            & > a{
+                img{
+                    transition: transform 0.1s;
+                    max-width: 100%;
+                    border-radius: 3px;
+                    box-shadow: 2px 2px 5px #000;
+                }
+            }
+
             h3,p{
                 font-size: 1.3rem;
                 color: $titleBlack;
@@ -438,6 +461,25 @@ footer{
     animation-fill-mode: forwards;
 }
 
+@keyframes codeButtonAnimationDown{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes codeButtonAnimationUp{
+    0%{
+        opacity: 1;
+        top: 0px;
+    }
+    100%{
+        opacity: 0;
+        top: -10px;
+    }
+    
+}
 /* PROPERTY CLASSES */
 .mr-top-6{
     margin-top: 6% !important;

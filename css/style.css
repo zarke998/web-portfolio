@@ -152,14 +152,40 @@ header {
       -ms-flex: 0 0 33.3%;
           flex: 0 0 33.3%;
   padding: 1%;
+  position: relative;
 }
 
-#projectsList .projectsListItem a:hover img {
+#projectsList .projectsListItem:hover img {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-#projectsList .projectsListItem img {
+#projectsList .projectsListItem:hover .code-link-button {
+  display: block;
+  -webkit-animation-name: codeButtonAnimationDown;
+          animation-name: codeButtonAnimationDown;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+#projectsList .projectsListItem .code-link-button {
+  position: absolute;
+  right: 4%;
+  top: 5%;
+  z-index: 1000;
+  display: none;
+}
+
+#projectsList .projectsListItem .code-link-button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+#projectsList .projectsListItem .code-link-button img {
+  width: 40px;
+}
+
+#projectsList .projectsListItem > a img {
   -webkit-transition: -webkit-transform 0.1s;
   transition: -webkit-transform 0.1s;
   transition: transform 0.1s;
@@ -532,6 +558,46 @@ footer p {
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes codeButtonAnimationDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes codeButtonAnimationDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes codeButtonAnimationUp {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -10px;
+  }
+}
+
+@keyframes codeButtonAnimationUp {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -10px;
+  }
 }
 
 /* PROPERTY CLASSES */
